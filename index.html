@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive drop-down menu</title>
+	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+</head>
+<body>
+<header>
+	<div class="top-line">
+		<div class="contacts">
+			<ul>
+				<li><i class="fa fa-phone" aria-hidden="true"></i>  <a href="#">+420 000 000 000</a></li>
+				<li><i class="fa fa-envelope" aria-hidden="true"></i>  <a href="#">info@mail.ua</a></li>
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			</ul>
+		</div>
+		<div class="social">
+			<ul>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="small-menu">
+		<i id="togglemenu" class="fa fa-align-justify" aria-hidden="true"></i>
+		<nav class="small-menu-dropdown display-none">
+			<ul>
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Contacts</a></li>
+			</ul>
+		</nav>
+	</div>
+	<nav class="main-menu">
+		<ul>
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li class="drop-down">
+				<a href="#">Gallery</a>
+					<div class="mega-menu">
+						<div class="mm-6column">
+							<div class="left-images">
+								<img  src="img/banner-300x250.png" alt="pic">
+								<p>Most popular to buy!</p>
+							</div>
+							</div>
+							<div class="mm-3column">
+							<div class="categories-list">
+							<ul>
+								<span>Computers</span>
+								<li><a href="#">Submenu</a></li>
+								<li><a href="#">Submenu</a></li>
+								<li><a href="#">Submenu</a></li>
+								<li><a href="#">Submenu</a></li>
+								<li><a class="mm-view-more" href="#">View more <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+							</ul>
+							</div>
+						</div>
+
+					<div class="mm-3column">
+						<div class="categories-list">
+						<ul>
+							<span>Computers</span>
+							<li><a href="#">Submenu</a></li>
+							<li><a href="#">Submenu</a></li>
+							<li><a href="#">Submenu</a></li>
+							<li><a href="#">Submenu</a></li>
+							<li><a class="mm-view-more" href="#">View more <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+						</ul>
+						</div>
+					</div>
+					<div class="mm-3column">
+						<div class="categories-list">
+						<ul>
+							<span>Computers</span>
+							<li><a href="#">Submenu</a></li>
+							<li><a href="#">Submenu</a></li>
+							<li><a href="#">Submenu</a></li>
+							<li><a href="#">Submenu</a></li>
+							<li><a class="mm-view-more" href="#">View more <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+						</ul>
+						</div>
+					</div>
+					</div>
+				</li>
+				<li><a href="#">Partners</a>
+					<div class="drop-down-partrer">
+						<ul>
+							<li><a href="#">Submenu</a></li>
+							<li><a href="#">Submenu</a></li>
+							<li><a href="#">Submenu</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#">Contacts</a></li>
+			</ul>
+	</nav>
+</header>
+<section class="wrap">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+</section>
+<script>
+$(document).ready(function(){
+	$('#togglemenu').click(function(){
+		$('.small-menu-dropdown').toggleClass('display-none');
+	})
+	$('.drop-down').hover(function(){
+		$('.mega-menu').addClass('display-mm');
+		$('.drop-down').addClass('active');
+	})
+	$('.drop-down').mouseleave(function(){
+		$('.mega-menu').removeClass('display-mm');
+		$('.drop-down').removeClass('active');
+		
+	})
+	})
+</script>
+</body>
+</html> 
